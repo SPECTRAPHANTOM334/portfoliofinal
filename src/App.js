@@ -13,11 +13,18 @@ import Header from "./components/Header";
 import RecentWork from "./components/RecentWork";
 import Footer from "./components/Footer";
 import Copyright from "./components/copyright";
+import Loader from "./components/Loader"; // Import the Loader component
 
 const App = () => {
+  const [isLoading, setIsLoading] = useState(true); // State for loading
   const [showScrollUp, setShowScrollUp] = useState(false);
 
   useEffect(() => {
+    // Simulate a loading delay
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // Adjust the timeout as needed
+
     const handleScroll = () => {
       if (window.scrollY > 500) {
         setShowScrollUp(true);
@@ -30,8 +37,13 @@ const App = () => {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      clearTimeout(timer); // Clear timer if component unmounts
     };
   }, []);
+
+  if (isLoading) {
+    return <Loader />; // Show loader while loading
+  }
 
   return (
     <div className="App">
