@@ -1,0 +1,95 @@
+/** @format */
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #1f1f38;
+}
+
+.headerSection {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: auto;
+  padding: 1.5rem 6rem;
+  min-height: 100vh;
+  background-color: #1f2235;
+}
+
+.header-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3%;
+  align-items: center;
+}
+
+.header-section {
+  align-self: end !important;
+}
+
+.text-content {
+  flex: 1;
+  max-width: 50%;
+}
+
+.text-content h1 {
+  font-size: 2rem;
+  animation: slideIn 2s ease-out forwards;
+}
+
+.text-content h1 span {
+  color: #f44336;
+  font-size: 6rem;
+  display: block;
+  animation: slideIn 2s ease-out forwards;
+}
+
+.subheading {
+  font-size: 2rem !important;
+  animation: slideIn 2s ease-out forwards;
+}
+
+.text-content p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 3% 0;
+  animation: slideIn 2s ease-out forwards;
+}
+
+.download-cv {
+  background-color: #f44336;
+  color: #fff;
+  padding: 2% 4%;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  display: inline-block;
+  margin-top: 2%;
+  border: 0.125rem solid #ff6347;
+  animation: fadeIn 3.5s ease-in forwards;
+  transition: color 0.3s ease, background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.download-cv:hover {
+  background-color: #fff;
+  color: #f44336;
+}
+
+.image-content img {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  animation: fadeIn 3.5s ease-in forwards;
+}
+
+.man {
+  width: 22rem;
+  animation: fadeIn 3.5s ease-in forwards;
+}

@@ -1,0 +1,152 @@
+/** @format */
+
+@keyframes load {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.loader-footercontainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 4rem 6rem;
+  background-color: #1f1f38;
+  padding-bottom: 5rem;
+  width: 100%;
+  height: auto;
+}
+.loader-footersection {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.loader-footerheading {
+  align-self: center;
+  width: 130px;
+  height: 50px;
+  border-radius: 10px;
+}
+.loader-footertext {
+  align-self: center;
+  width: 650px;
+  height: 40px;
+  border-radius: 10px;
+}
+.loader-footercontactsection {
+  display: flex;
+  flex-direction: row;
+  padding-top: 3%;
+  width: 100%;
+  height: auto;
+}
+.loader-footercontactdetailsparents {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 1.5rem;
+  height: auto;
+}
+.loader-footercontactdetails {
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+}
+.loader-footerphone {
+  width: 180px;
+  height: 50px;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+.loader-footeremail {
+  width: 220px;
+  height: 50px;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+.loader-footeraddress {
+  width: 220px;
+  height: 50px;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+.loader-footerconnectparent {
+  width: 100%;
+  height: auto;
+}
+.loader-footerconnecttext {
+  width: 220px;
+  height: 40px;
+  border-radius: 10px;
+}
+.loader-footerconnecticonsparent {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  margin-top: 1.8rem;
+}
+
+.loader-footerconnecticons {
+  margin-right: 2.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.loader-footercontactformparent {
+  display: flex;
+  justify-content: end;
+  flex: 1;
+  height: auto;
+}
+.loader-footercontactform {
+  width: 79%;
+  height: 380px;
+  border-radius: 10px;
+}
+
+.loader-footerheading,
+.loader-footertext,
+.loader-footerphone,
+.loader-footeremail,
+.loader-footeraddress,
+.loader-footerconnecttext,
+.loader-footerconnecticons,
+.loader-footercontactform {
+  position: relative;
+  overflow: hidden;
+  background-color: #696b6b;
+}
+
+.loader-footerheading::before,
+.loader-footertext::before,
+.loader-footerphone::before,
+.loader-footeremail::before,
+.loader-footeraddress::before,
+.loader-footerconnecttext::before,
+.loader-footerconnecticons::before,
+.loader-footercontactform::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  animation: load 1.8s infinite ease-in-out;
+}
